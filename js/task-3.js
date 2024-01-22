@@ -1,6 +1,6 @@
 function checkForSpam(message) {
-  message = message.toLowerCase(message);
-  if (message.includes("spam") || message.includes("sale")) {
+  spamMessage = message.toLowerCase(message);
+  if (spamMessage.includes("spam") || spamMessage.includes("sale")) {
     return true;
   } else {
     return false;

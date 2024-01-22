@@ -1,12 +1,11 @@
 function formatMessage(message, maxLength) {
-  let newStroke;
-  newStroke = message.slice(0, maxLength);
+  const shortenedMessage = message.slice(0, maxLength);
   if (message.length <= maxLength) {
     return message;
-  } else message.length > maxLength;
-  return newStroke + "...";
+  } else if (message.length > maxLength) {
+    return shortenedMessage + "...";
+  }
 }
-
 console.log(formatMessage("Curabitur ligula sapien", 16));
 console.log(formatMessage("Curabitur ligula sapien", 23));
 console.log(formatMessage("Vestibulum facilisis purus nec", 20));
